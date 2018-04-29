@@ -2,6 +2,11 @@
  * Create a list that holds all of your cards
  */
 
+let cards = document.querySelectorAll(".card");
+// document.getElementsByClassName("card") = shuffleCards; (am trying to get shuffle
+// card to apear on the page )
+
+// document.getElementsByClassName("deck").innerHTML = card;
 
 /*
  * Display the cards on the page
@@ -9,6 +14,9 @@
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+
+
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -24,7 +32,13 @@ function shuffle(array) {
 
     return array;
 }
-
+let card = []
+for (let i = 0; i < cards.length; i++) {
+    card.push(cards[i]);
+};
+let shuffleCards = card;
+shuffleCards = shuffle(shuffleCards);
+console.log(shuffleCards);
 
 /*
  * set up the event listener for a card. If a card is clicked:
